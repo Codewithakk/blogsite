@@ -1,0 +1,7 @@
+/**
+ * blog-description router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::blog-description.blog-description');

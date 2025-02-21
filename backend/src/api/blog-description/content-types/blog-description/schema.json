@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_descriptions",
+  "info": {
+    "singularName": "blog-description",
+    "pluralName": "blog-descriptions",
+    "displayName": "blog_description",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blog_description": {
+      "type": "text",
+      "required": true
+    },
+    "blog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog.blog",
+      "mappedBy": "blog_description"
+    }
+  }
+}
