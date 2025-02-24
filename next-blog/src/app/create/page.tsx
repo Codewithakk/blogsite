@@ -46,7 +46,7 @@ const CreateBlog = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:1337/api/blogs', formData, {
+      const response = await axios.post('https://blogsite-h50s.onrender.com/api/blogs', formData, {
         headers: {
           // Axios automatically handles Content-Type for FormData
         },

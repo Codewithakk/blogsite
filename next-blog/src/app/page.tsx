@@ -14,7 +14,7 @@ const BlogHomePage: React.FC = () => {
   useEffect(() => {
     // Fetch blog data from the API
     axios
-      .get('http://localhost:1337/api/blogs?populate=*')
+      .get('https://blogsite-h50s.onrender.com/api/blogs?populate=*')
       .then((response) => {
         setBlogs(response.data.data);
         setLoading(false);
@@ -64,7 +64,7 @@ const BlogHomePage: React.FC = () => {
                 className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl hover:bg-gray-100"
               >
                 <img
-                  src={`http://localhost:1337${blog.img?.formats?.thumbnail?.url}` || 'https://via.placeholder.com/600x400'}
+                  src={`https://blogsite-h50s.onrender.com/${blog.img?.formats?.thumbnail?.url}` || 'https://via.placeholder.com/600x400'}
                   alt={blog.title}
                   className="w-full h-48 object-cover rounded-t-lg"
                   loading="lazy"

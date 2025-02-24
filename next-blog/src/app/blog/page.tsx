@@ -16,7 +16,7 @@ const BlogPage: React.FC = () => {
   // Fetching the blog data
   const fetchBlogs = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/blogs?populate=*');
+      const response = await axios.get('https://blogsite-h50s.onrender.com/api/blogs?populate=*');
       setBlogs(response.data.data);
       setLoading(false);
     } catch (err) {

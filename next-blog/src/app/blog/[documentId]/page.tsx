@@ -16,7 +16,7 @@ const BlogDetail: React.FC = () => {
     if (documentId) {
       const fetchBlog = async () => {
         try {
-          const response = await axios.get(`http://localhost:1337/api/blogs/${documentId}?populate=*`);
+          const response = await axios.get(`https://blogsite-h50s.onrender.com/api/blogs/${documentId}?populate=*`);
           setBlog(response.data.data);
           setLoading(false);
         } catch (err) {
